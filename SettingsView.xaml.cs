@@ -16,28 +16,18 @@ using LightScape;
 
 namespace LightScape
 {
-    public partial class MainWindow : Window
+    public partial class SettingsView : UserControl
     {
-        public MainWindow()
+        public SettingsView()
         {
             InitializeComponent();
-
         }
 
-        private void Settings_Click(object sender, MouseButtonEventArgs e)
-        {
-            MainContent.Content = new SettingsView();
-        }
-
+        /*
         private void About_Click(object sender, MouseButtonEventArgs e)
         {
-            MainContent.Content = new AboutView();
-        }
-
-        private void Main_Click(object sender, MouseButtonEventArgs e)
-        {
-            MainContent.Content = new DashboardView();
-        }
-
+            SettingsView = new AboutView();
+        } */
     }
 }
+

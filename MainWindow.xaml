@@ -14,6 +14,9 @@
          - Einheitlicher Außenabstand (nur horizontal)
          - Kupfergold als Glow-Farbe -->
         <Style x:Key="NavTextStyle" TargetType="TextBlock">
+            <!-- Font mit der Schriftart "Audiowide" aus dem Fonts-Ordner ansprechen -->
+            <Setter Property="FontFamily" Value="pack://application:,,,/LightScape;component/Fonts/Audiowide-Regular.ttf#Audiowide"/>
+            <Setter Property="FontSize" Value="16"/>
             <!-- Standardfarbe: Weiß -->
             <Setter Property="Foreground" Value="White"/>
             <!-- Abstand nach rechts und links (kein vertikaler Abstand nötig) -->
@@ -69,35 +72,47 @@
                    - Spalte 0 für das Logo (feste Breite)
                    - Spalte 1 für das Navigationsmenü (füllt den restlichen Platz aus) -->
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <!-- Navigationsmenü in Spalte 1 (rechtsbündig ausgerichtet) -->
-                <StackPanel Grid.Column="1"
+                <StackPanel
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center">
                     <!-- Menüeinträge mit Verweis auf Style aus Windows.Resources -->
-                    <TextBlock Text="Home" Style="{StaticResource NavTextStyle}" Margin="10,0"/>
-                    <TextBlock Text="Settings" Style="{StaticResource NavTextStyle}" Margin="10,0"/>
-                    <TextBlock Text="About" Style="{StaticResource NavTextStyle}" Margin="10,0"/>
+                    <TextBlock Text="Dashboard"
+                               Style="{StaticResource NavTextStyle}"
+                               Margin="10,0"
+                               Cursor="Hand"
+                               MouseDown="Main_Click"/>
+                    <TextBlock Text="Settings"
+                               Style="{StaticResource NavTextStyle}"
+                               Margin="10,0"
+                               Cursor="Hand"
+                               MouseDown="Settings_Click"/>
+                    <TextBlock Text="About"
+                               Style="{StaticResource NavTextStyle}"
+                               Margin="10,0"
+                               Cursor="Hand"
+                               MouseDown="About_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>
-        <!-- Logo -->
-        <Image
-        Source="pack://application:,,,/Assets/LightScapeLogo4000.png"
-        Height="160"
-        Margin="-13,-20,0,-40"
-        VerticalAlignment="Top"
-        HorizontalAlignment="Left"
-        Panel.ZIndex="2"
-        RenderOptions.BitmapScalingMode="HighQuality"/>
 
-        <Grid Grid.Row="1"
-      Panel.ZIndex="0">
-            <!-- Hauptinhalt (zweite Zeile) -->
-            <TextBlock Text="Hauptinhalt" Foreground="White" Width="Auto" Margin="3"/>
-        </Grid>
+        <!-- Hauptinhalt -->
+        <ContentControl x:Name="MainContent"
+                Grid.Row="1"
+                Panel.ZIndex="0"/>
+
+        <!-- Logo separat in einem überlagerten Canvas -->
+        <Canvas Panel.ZIndex="2"
+            IsHitTestVisible="False">
+            <Image
+            Source="pack://application:,,,/Assets/LIGHT SCAPE.png"
+            Height="340"
+            Canvas.Left="-63"
+            Canvas.Top="-106"
+            RenderOptions.BitmapScalingMode="HighQuality"/>
+        </Canvas>
     </Grid>
 </Window>
