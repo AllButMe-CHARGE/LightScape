@@ -21,7 +21,7 @@ namespace LightScape
         public MainWindow()
         {
             InitializeComponent();
-
+            MainContent.Content = new DashboardView();
         }
 
         private void Settings_Click(object sender, MouseButtonEventArgs e)

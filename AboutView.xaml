@@ -8,6 +8,245 @@
              d:DesignHeight="450" d:DesignWidth="800">
     
     <Grid>
-        <TextBlock Text="Hier befindet sich die About Page!" Foreground="white"/>
+        <Border 
+            Background="#55252135" 
+            CornerRadius="16" 
+            Padding="12" 
+            Margin="24,54,24,24"
+            BorderBrush="#88FFCB77"
+            BorderThickness="1">
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+            <!-- Überschrift -->
+                    <TextBlock Text="About Light Scape"
+                       Foreground="white"
+                       FontSize="24"
+                       Margin="0,0,0,12"/>
+            <!-- Fließtext -->
+                    <TextBlock Foreground="White"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       Margin="0,0,0,12">
+                       Light Scape is a collaborative project developed by
+                       Light Blast (Pascal Probst) and Tim Salzer. 
+                       The application combines real-time lighting visuals and interactive controls, 
+                       built with WPF and C#.
+                       </TextBlock>
+
+                    <TextBlock Text="Project Overview"
+                       Foreground="White"
+                       FontSize="24"
+                       Margin="0,24,0,12"/>
+
+                    <TextBlock Foreground="White"
+                        FontSize="14"
+                        TextWrapping="Wrap"
+                        Margin="0,0,0,12">
+                        Light Scape is an interactive lighting control and visualization tool, 
+                        combining real-time 3D effects with customizable animations.
+                        The application enables seamless interaction between 
+                        lighting visuals and user controls, designed for live events, 
+                        creative showcases, and experimental installations.
+                    </TextBlock>
+
+                    <TextBlock Text="Current Features:"
+                        Foreground="White"
+                        FontSize="16"
+                        Margin="0,0,0,12"/>
+
+                    <TextBlock Foreground="White"
+                        FontSize="14"
+                        Margin="0,0,0,12">
+                        • Real-time visual effects
+                        <LineBreak/>
+                        • Customizable color palettes
+                        <LineBreak/>
+                        • Integration with 3D visuals created in Blender
+                        <LineBreak/>
+                        • Responsive UI built with WPF and C#
+                    </TextBlock>
+
+                    <TextBlock Text="Planned Features:"
+                        Foreground="White"
+                        FontSize="16"
+                        Margin="0,0,0,12"/>
+
+                    <TextBlock Foreground="White"
+                        FontSize="14"
+                        Margin="0,0,0,12">
+                        • Multi-device control
+                        <LineBreak/>
+                        • Extended animation library
+                        <LineBreak/>
+                        • Preset and profile saving with JSON
+                    </TextBlock>
+
+                    <TextBlock Text="Version and Build"
+                       Foreground="White"
+                       FontSize="24"
+                       Margin="0,24,0,12"/>
+
+                    <TextBlock Foreground="White"
+                    FontSize="14"
+                    TextWrapping="Wrap"
+                    Margin="0,0,0,12">    
+                        
+                    <!-- Wichtiger Punkt:
+                    Kein Text="..." verwenden, wenn du <LineBreak/> nutzen willst.
+                    Stattdessen Text direkt zwischen die öffnenden und
+                    schließenden Tags schreiben. -->
+                    Current Version: 0.1 (Preview Build)
+                    <LineBreak/> <!-- Zeilenumbruch -->
+                    Project Started: July 29, 2025
+                    <LineBreak/>
+                    Build Date: <Run x:Name="BuildDateRun"/>
+                    <LineBreak/>
+                    Framework: .NET 8.0 / WPF
+                    </TextBlock>
+
+                    <TextBlock Text="Tech Stack"
+                       Foreground="White"
+                       FontSize="24"
+                       Margin="0,24,0,12"/>
+
+                    <TextBlock Foreground="White"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       Margin="0,0,0,12">
+                       Light Scape is built using modern tools and technologies that 
+                       enable responsive design, real-time visual feedback, and 
+                       smooth interaction between UI and visuals.
+                       <LineBreak/>
+                       <LineBreak/>
+                       • Language: C#
+                       <LineBreak/>
+                       • Framework: .NET 8.0 / WPF
+                       <LineBreak/>
+                       • Graphics and Visuals: Blender and TouchDesigner 
+                        (3D models and animations by Light Blast)
+                       <LineBreak/>
+                       • UI Styling: XAML, Custom Fonts, Gradient Backgrounds
+                       <LineBreak/>
+                       • Animation and Visual Feedback: Storyboards, Ed-GIF-Integration
+                       <LineBreak/>
+                       • Build Tool: Visual Studio 2022
+                       <LineBreak/>
+                       • Source Control: Git and GitHub
+                    </TextBlock>
+
+                    <TextBlock Text="License / Usage Notice"
+                       Foreground="White"
+                       FontSize="24"
+                       Margin="0,24,0,12"/>
+
+                    <TextBlock Foreground="White"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       Margin="0,0,0,12">
+                       Light Scape is a non-commercial application developed as 
+                       a personal creative project.
+                       It may be viewed, shared, and showcased freely for demonstration 
+                       or educational purposes.
+                       <LineBreak/>
+                       <LineBreak/>
+                       Commercial usage, redistribution, or modification for profit 
+                       is not permitted without prior written permission.
+                       <LineBreak/>
+                       This project is released under a Custom Non-Commercial License.
+                       <LineBreak/>
+                       All rights remain with the original creators:
+                       <LineBreak/>
+                       • Pascal Probst (Light Blast)
+                       <LineBreak/>
+                       • Tim Salzer
+                       <LineBreak/>
+                       <!-- Lizenz-Link: Öffnet die eingebettete PDF im Standard-PDF-Viewer -->
+                       <TextBlock Foreground="White"
+                          FontSize="14"
+                          Margin="0,0,0,12">
+                       <Hyperlink Click="OpenPdfLicense"
+                          Foreground="#FFCB77"
+                          Cursor="Hand">
+                          View Full License (PDF)
+                       </Hyperlink>
+                       </TextBlock>    
+                    </TextBlock>
+                    
+                    <TextBlock Text="Character Usage (Ed)"
+                       Foreground="White"
+                       FontSize="24"
+                       Margin="0,24,0,12"/>
+
+                    <TextBlock Foreground="White"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       Margin="0,0,0,12">   
+                       The “Ed” character derives from the Seascape Network NFT collection on the BNB Smart Chain (BSC).
+                       Ownership of the referenced NFTs can be verified on-chain.
+                       <LineBreak/>
+                    </TextBlock>
+                    <TextBlock Foreground="White"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       Margin="16,0,0,6">
+                       Token IDs:
+                       <LineBreak/>
+                       <LineBreak/>
+                       • Ed #1: 212600001320
+                       <LineBreak/>
+                       • Ed #2: 212600004202
+                    </TextBlock>
+                    <TextBlock Foreground="White"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       Margin="16,8,0,12">  
+                       This project references the character for personal, non-commercial use.
+                       <LineBreak/>
+                       No endorsement by Seascape Network is claimed.
+                       <LineBreak/>
+                       • Always depicted as human character
+                       <LineBreak/>
+                       • No zombie, ape, or fantasy variants
+                       <LineBreak/>
+                       • Maintain consistent clothing and expression
+                    </TextBlock>
+
+                    <TextBlock Text="Ownership and Credits"
+                       Foreground="White"
+                       FontSize="24"
+                       Margin="0,24,0,12"/>
+
+                    <TextBlock Foreground="White"
+                    FontSize="14"
+                    TextWrapping="Wrap"
+                    Margin="0,0,0,12">
+                    Light Scape is created by:
+                    <LineBreak/>
+                    <LineBreak/>
+                    • Light Blast (Pascal Probst) – Lighting design, 3D visuals
+                    <LineBreak/>
+                    • Tim Salzer – Application development, UI/UX design
+                    <LineBreak/>
+                    <LineBreak/>
+                    Website:
+                        <Hyperlink NavigateUri="https://light-blast.de"
+                                   Foreground="#FFCB77"
+                                   RequestNavigate="Hyperlink_RequestNavigate"
+                                   Cursor="Hand">
+                        https://light-blast.de
+                        </Hyperlink>
+                    <LineBreak/>
+                    GitHub:
+                        <Hyperlink NavigateUri="https://github.com/AllButMe-CHARGE"
+                                   Foreground="#FFCB77"
+                                   RequestNavigate="Hyperlink_RequestNavigate"
+                                   Cursor="Hand">
+                            https://github.com/AllButMe-CHARGE
+                        </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </UserControl>
