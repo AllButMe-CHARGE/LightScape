@@ -21,6 +21,11 @@ namespace LightScape
         public DashboardView()
         {
             InitializeComponent();
+
+            if (AppSettings.EdModeEnabled)
+            {
+                EdStatusBlock.Visibility = Visibility.Visible;
+            }
         }
     }
 }

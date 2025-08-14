@@ -8,6 +8,36 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        <TextBlock Text="Hier befinden sich die Settings!" Foreground="white"/>
+        <Border
+            Background="#55252135"
+            CornerRadius="16" 
+            Padding="12" 
+            Margin="24,54,24,24"
+            BorderBrush="#88FFCB77"
+            BorderThickness="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel HorizontalAlignment="Left">
+
+                    <TextBlock Text="Settings"
+                               Foreground="White"
+                               FontSize="24"
+                               Margin="0,0,0,12"/>
+
+
+                    <TextBlock Text="Ed Easteregg"
+                               Foreground="White"
+                               FontSize="16"
+                               Margin="0,0,0,12"/>
+
+                    <!--Togglebutton um das Ed Easteregg zu aktivieren oder zu deaktivieren -->
+                    <ToggleButton x:Name="EdToggleButton"
+                                  Margin="0"
+                                  Content="Ed-Mode On / Ed-Mode Off"
+                                  Width="160"
+                                  Checked="Toggle_EdMode_Checked"
+                                  Unchecked="Toggle_EdMode_Unchecked"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </UserControl>

@@ -6,7 +6,15 @@
              xmlns:local="clr-namespace:LightScape"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    
     <Grid>
         <TextBlock Text="Willkommen zurück auf dem Dashboard!" Foreground="white"/>
+
+        <TextBlock x:Name="EdStatusBlock"
+                   Text="Ed is wachting you!"
+                   Foreground="White"
+                   FontSize="36"
+                   Margin="150,150,150,150"
+                   Visibility="Collapsed"/>
     </Grid>
 </UserControl>

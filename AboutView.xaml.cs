@@ -49,17 +49,24 @@ namespace LightScape
             e.Handled = true;
         }
 
+        // Event-Handler für das Öffnen der PDF-Lizenzdatei bei Klick auf den Hyperlink
         private void OpenPdfLicense(object sender, RoutedEventArgs e)
         {
+            // Holt sich den Basis-Ordner, in dem die ausgeführte .exe liegt
             string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            // Baut daraus den vollständigen Pfad zur PDF-Datei innerhalb des "Assets"-Ordners
             string pdf = System.IO.Path.Combine(exeDirectory, "Assets", "LightScape_License.pdf");
 
+            // Prüft, ob die Datei überhaupt existiert
             if (File.Exists(pdf))
             {
-              Process.Start(new ProcessStartInfo(pdf) { UseShellExecute= true });
+                // Wenn ja, öffnet sie im Standardprogramm für PDFs (z. B. Acrobat Reader)
+                // UseShellExecute = true ist wichtig, damit Windows den Standardweg nimmt
+                Process.Start(new ProcessStartInfo(pdf) { UseShellExecute= true });
             }
 
             else
+            // Wenn nein, zeigt eine Fehlermeldung an
             { MessageBox.Show("The lincense file could not be found.", "File missing", MessageBoxButton.OK, MessageBoxImage.Error); };
         }
 
